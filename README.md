@@ -1,4 +1,4 @@
-# portofolio 
+# portfolio 
 
 portfolio extraído de un [video de midudev](https://www.youtube.com/watch?v=HEMvsJTBweY&t) y modificado a mi gusto
 

@@ -3,19 +3,26 @@ import Layout from "../layouts/Layout.astro";
 import Card from "../components/Card.astro";
 import Badge from "../components/Badge.astro";
 import SocialPill from "../components/SocialPill.astro";
+import SectionContainer from "../components/SectionContainer.astro";
+import Projects from "../components/Projects.astro";
+import Gallery from "../components/Gallery.astro";
 import Github from "../components/icons/Github.astro";
 import Instagram from "../components/icons/Instagram.astro";
 import Steam from "../components/icons/Steam.astro";
 import Gmail from "../components/icons/Gmail.astro";
 ---
 
-<Layout title="Portfolio de cnrxad - Desarrollador y Programador Web con 2 años de experiencia" description="Contrata a cnrxad para crear la aplicación web de tus sueños.">
+<Layout
+  title="Portfolio de cnrxad - Desarrollador y Programador Web con 2 años de experiencia"
+  description="Contrata a cnrxad para crear la aplicación web de tus sueños."
+>
   <main>
-    <section class="w-full lg:w-[740px] mx-auto py-44">
+    <SectionContainer class="py-44 pb-24">
       <img
         class="rounded-full w-16 h-16"
         src="https://avatars.githubusercontent.com/u/105384316?v=4"
         alt="cnrxad"
+        draggable="false"
       />
 
       <h1 class="text-white text-5xl font-bold flex flex-row gap-x-4 pb-10">
@@ -28,10 +35,11 @@ import Gmail from "../components/icons/Gmail.astro";
           <Badge>En la cola del INEM</Badge></a
         >
       </h1>
-      <h2 class="text-2xl opacity-85">
+      <h2 class="text-2xl opacity-85 text-center">
         +2 años de experiencia. <span class="text-yellow-100"
-          >Desarrollador Web.</span
-        > De <span class="text-blue-200">Galiza</span>, España 🇪🇸
+          >Desarrollador Web y Programador Junior.</span
+        >
+        <br /> - De <span class="text-blue-200">Galiza</span>, España 🇪🇸
       </h2>
 
       <nav class="flex gap-x-8 mt-16 h-12 justify-center">
@@ -52,6 +60,18 @@ import Gmail from "../components/icons/Gmail.astro";
           cnrxad@gmail.com
         </SocialPill>
       </nav>
-    </section>
+    </SectionContainer>
+
+    <SectionContainer>
+      <h2 class="text-2xl font-semibold mb-6"># Proyectos</h2>
+      <h3 class="text-xl mb-4 ml-12">
+        - <span class="underline">Timeline:</span>
+      </h3>
+      <Projects id="Projects" />
+      <!-- <h3 class="text-xl mt-10 ml-12">
+        - <span class="underline">Gallery:</span>
+      </h3>
+      <Gallery></Gallery> -->
+    </SectionContainer>
   </main>
 </Layout>
