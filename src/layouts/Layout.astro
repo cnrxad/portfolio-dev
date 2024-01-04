@@ -22,7 +22,7 @@ const { description, title } = Astro.props;
     <title>{title}</title>
   </head>
   <body>
-	<div class="absolute top-0 z-[-2] h-screen w-screen bg-neutral-950 bg-[radial-gradient(ellipse_80%_80%_at_50%_-20%,rgba(120,119,198,0.3),rgba(255,255,255,0))]"></div>
+	<div class="absolute top-0 z-[-2] h-screen w-screen bg-neutral-950 bg-[radial-gradient(ellipse_75%_100%_at_50%_-20%,rgba(120,119,198,0.3),rgba(222,255,255,0))]"></div>
     <Header></Header>
     <slot />
   </body>
@@ -40,5 +40,6 @@ const { description, title } = Astro.props;
 	display: flex;
 	flex-direction: column;
 	min-height: 100vh;
+  overflow-x: hidden;
   }
 </style>

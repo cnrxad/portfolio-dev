@@ -3,9 +3,11 @@ import Layout from "../layouts/Layout.astro";
 import Card from "../components/Card.astro";
 import Badge from "../components/Badge.astro";
 import SocialPill from "../components/SocialPill.astro";
+import SectionMain from "../components/SectionMain.astro";
 import SectionContainer from "../components/SectionContainer.astro";
 import Projects from "../components/Projects.astro";
 import Gallery from "../components/Gallery.astro";
+import Footer from "../components/Footer.astro";
 import Github from "../components/icons/Github.astro";
 import Instagram from "../components/icons/Instagram.astro";
 import Steam from "../components/icons/Steam.astro";
@@ -17,7 +19,7 @@ import Gmail from "../components/icons/Gmail.astro";
   description="Contrata a cnrxad para crear la aplicación web de tus sueños."
 >
   <main>
-    <SectionContainer class="py-44 pb-24">
+    <SectionMain class="py-44 pb-24">
       <img
         class="rounded-full w-16 h-16"
         src="https://avatars.githubusercontent.com/u/105384316?v=4"
@@ -60,18 +62,19 @@ import Gmail from "../components/icons/Gmail.astro";
           cnrxad@gmail.com
         </SocialPill>
       </nav>
-    </SectionContainer>
+    </SectionMain>
 
     <SectionContainer>
-      <h2 class="text-2xl font-semibold mb-6"># Proyectos</h2>
-      <h3 class="text-xl mb-4 ml-12">
+      <h2 class="text-2xl font-semibold mb-10"># Proyectos</h2>
+      <h3 class="text-xl mb-6 ml-12">
         - <span class="underline">Timeline:</span>
       </h3>
       <Projects id="Projects" />
-      <!-- <h3 class="text-xl mt-10 ml-12">
+      <h3 class="text-xl mt-10 ml-12 mb-6">
         - <span class="underline">Gallery:</span>
       </h3>
-      <Gallery></Gallery> -->
+      <Gallery></Gallery>
     </SectionContainer>
+    <Footer></Footer>
   </main>
 </Layout>
