@@ -8,8 +8,6 @@ interface Props {
 }
 
 const { description, title } = Astro.props;
-
-
 ---
 
 <style>
@@ -20,16 +18,15 @@ const { description, title } = Astro.props;
 </style>
 
 <script type="module">
-    document.addEventListener('DOMContentLoaded', (event) => {
-        const element = document.querySelector('#fadeDiv');
-        if (element && element instanceof HTMLElement) {
-            setTimeout(() => {
-                element.style.opacity = '1';
-            }, 0);
-        }
-    });
+  document.addEventListener("DOMContentLoaded", (event) => {
+    const element = document.querySelector("#fadeDiv");
+    if (element && element instanceof HTMLElement) {
+      setTimeout(() => {
+        element.style.opacity = "1";
+      }, 0);
+    }
+  });
 </script>
-
 
 <html lang="en">
   <head>
