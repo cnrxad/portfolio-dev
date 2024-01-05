@@ -7,6 +7,7 @@ import SectionMain from "../components/SectionMain.astro";
 import SectionContainer from "../components/SectionContainer.astro";
 import Projects from "../components/Projects.astro";
 import Gallery from "../components/Gallery.astro";
+import Contact from "../components/Contact.astro";
 import Footer from "../components/Footer.astro";
 import Github from "../components/icons/Github.astro";
 import Instagram from "../components/icons/Instagram.astro";
@@ -65,7 +66,7 @@ import Gmail from "../components/icons/Gmail.astro";
     </SectionMain>
 
     <SectionContainer>
-      <h2 class="text-2xl font-semibold mb-10"># Proyectos</h2>
+      <h2 id="Proyectos" class="text-2xl font-semibold mb-10"># Proyectos</h2>
       <h3 class="text-xl mb-6 ml-12">
         - <span class="underline">Timeline:</span>
       </h3>
@@ -74,6 +75,10 @@ import Gmail from "../components/icons/Gmail.astro";
         - <span class="underline">Gallery:</span>
       </h3>
       <Gallery />
+    </SectionContainer>
+    <SectionContainer>
+      <h2 id="Contacto" class="text-2xl font-semibold mb-10"># Contacto</h2>
+      <Contact></Contact>
     </SectionContainer>
     <Footer />
   </main>
