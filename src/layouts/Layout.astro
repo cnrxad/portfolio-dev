@@ -1,17 +1,36 @@
 ---
-import '@fontsource-variable/onest'
+import "@fontsource-variable/onest";
 
-
-import Header from '../components/Header.astro';
+import Header from "../components/Header.astro";
 interface Props {
   title: string;
   description: string;
 }
 
 const { description, title } = Astro.props;
+
+
 ---
 
-<!doctype html>
+<style>
+  .fade {
+    opacity: 0;
+    transition: opacity 1.68s ease-in;
+  }
+</style>
+
+<script type="module">
+    document.addEventListener('DOMContentLoaded', (event) => {
+        const element = document.querySelector('#fadeDiv');
+        if (element && element instanceof HTMLElement) {
+            setTimeout(() => {
+                element.style.opacity = '1';
+            }, 0);
+        }
+    });
+</script>
+
+
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -22,24 +41,28 @@ const { description, title } = Astro.props;
     <title>{title}</title>
   </head>
   <body>
-	<div class="absolute top-0 z-[-2] h-screen w-screen bg-neutral-950 bg-[radial-gradient(ellipse_75%_100%_at_50%_-20%,rgba(120,119,198,0.3),rgba(222,255,255,0))]"></div>
-    <Header></Header>
+    <div
+      class="absolute top-0 z-[-2] h-full w-full bg-neutral-950 bg-[radial-gradient(ellipse_75%_100%_at_50%_-20%,rgba(120,119,198,0.3),rgba(222,255,255,0))] fade"
+      id="fadeDiv"
+    >
+    </div>
+    <Header />
     <slot />
   </body>
 </html>
 
 <style is:global>
   :root {
-	color-scheme: light dark;
+    color-scheme: light dark;
   }
   html {
     font-family: "Onest Variable", system-ui, sans-serif;
   }
-  body{
-	background-color: #050505;
-	display: flex;
-	flex-direction: column;
-	min-height: 100vh;
-  overflow-x: hidden;
+  body {
+    background-color: #050505;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    overflow-x: hidden;
   }
 </style>
