@@ -19,7 +19,7 @@ import Gmail from "../components/icons/Gmail.astro";
   title="Portfolio de cnrxad - Desarrollador y Programador Web con 2 años de experiencia"
   description="Contrata a cnrxad para crear la aplicación web de tus sueños."
 >
-  <main>
+  <main class="px-4 w-full">
     <SectionMain class="py-44 pb-24">
       <img
         class="rounded-full w-16 h-16"
@@ -28,7 +28,7 @@ import Gmail from "../components/icons/Gmail.astro";
         draggable="false"
       />
 
-      <h1 class="text-white text-5xl font-bold flex flex-row gap-x-4 pb-10">
+      <h1 class="text-white text-5xl font-bold flex gap-x-4 pb-10">
         Hey, soy cnrxad <a
           href="https://github.com/cnrxad"
           target="_blank"
@@ -45,26 +45,41 @@ import Gmail from "../components/icons/Gmail.astro";
         <br /> - De <span class="text-blue-200">Galiza</span>, España 🇪🇸
       </h2>
 
-      <nav class="flex gap-x-8 mt-16 h-12 justify-center">
-        <SocialPill href="https://github.com/cnrxad">
-          <Github class="w-4 h-4" />
-          Github
-        </SocialPill>
-        <SocialPill href="https://instagram.com/cnrxad">
-          <Instagram class="w-4 h-4" />
-          Instagram
-        </SocialPill>
-        <SocialPill href="https://steamcommunity.com/id/cnrxad/">
-          <Steam class="w-4 h-4" />
-          Steam
-        </SocialPill>
-        <SocialPill href="https://cnrxad@gmail.com">
-          <Gmail class="w-4 h-4" />
-          cnrxad@gmail.com
-        </SocialPill>
+      <nav id="socials" class="flex gap-x-8 mt-16 h-12 justify-center">
+          <SocialPill href="https://github.com/cnrxad">
+            <Github class="w-4 h-4" />
+            Github
+          </SocialPill>
+          <SocialPill href="https://instagram.com/cnrxad">
+            <Instagram class="w-4 h-4" />
+            Instagram
+          </SocialPill>
+          <SocialPill href="https://steamcommunity.com/id/cnrxad/">
+            <Steam class="w-4 h-4" />
+            Steam
+          </SocialPill>
+          <SocialPill href="https://cnrxad@gmail.com">
+            <Gmail class="w-4 h-4" />
+            cnrxad@gmail.com
+          </SocialPill>
       </nav>
     </SectionMain>
 
+<style>
+  
+  @media (max-width: 768px) {
+    #socials{
+      flex-direction: column;
+      padding-top: 20%;
+      padding-bottom: 25%;
+      column-gap: 50%;
+    }
+    h1{
+      padding-bottom: 3%;
+    }
+  }
+</style>
+    </style>
     <SectionContainer>
       <h2 id="Proyectos" class="text-2xl font-semibold mb-10"># Proyectos</h2>
       <h3 class="text-xl mb-6 ml-12">
@@ -78,7 +93,7 @@ import Gmail from "../components/icons/Gmail.astro";
     </SectionContainer>
     <SectionContainer>
       <h2 id="Contacto" class="text-2xl font-semibold mb-10"># Contacto</h2>
-      <Contact></Contact>
+      <Contact />
     </SectionContainer>
     <Footer />
   </main>

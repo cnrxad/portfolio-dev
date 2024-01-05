@@ -2,7 +2,7 @@
   class="rounded-full border
   border-white/10 bg-white/5 
     flex justify-center items-center
-    gap-x-4 py-1 px-4
+    gap-x-4 py-1 px-1
     hover:scale-110 hover:bg-white/10
     transition"
   {...Astro.props}
@@ -11,3 +11,13 @@
 >
   <slot />
 </a>
+
+<style>
+  
+  @media (max-width: 768px) {
+    a{
+      margin-left: 20%;
+      margin-right: 20%;
+    }
+  }
+</style>

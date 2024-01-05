@@ -39,7 +39,7 @@ const { description, title } = Astro.props;
   </head>
   <body>
     <div
-      class="absolute top-0 z-[-2] h-full w-full bg-neutral-950 bg-[radial-gradient(ellipse_75%_100%_at_50%_-20%,rgba(120,119,198,0.3),rgba(222,255,255,0))] fade"
+      class="absolute top-0 z-[-10] h-full min-w-full bg-black bg-[radial-gradient(ellipse_75%_100%_at_50%_-20%,rgba(120,119,198,0.3),rgba(222,255,255,0))] fade"
       id="fadeDiv"
     >
     </div>
@@ -55,14 +55,25 @@ const { description, title } = Astro.props;
   html {
     font-family: "Onest Variable", system-ui, sans-serif;
     scroll-behavior: smooth;
+    text-wrap: pretty;
+    max-width: 100%;
+    min-width: 100%;
   }
   body {
-    background-color: #050505;
+    background-color: #000;
     display: flex;
     flex-direction: column;
-    min-height: 100vh;
     overflow-x: hidden;
   }
+
+  @media (prefers-reduced-motion: reduce) {
+    html {
+      scroll-behavior: auto;
+    }
+
+
+  }
+
   * {
     scrollbar-width: thin;
     scrollbar-color: #bfdbfe #ffffff;
@@ -73,5 +84,11 @@ const { description, title } = Astro.props;
   *::-webkit-scrollbar-thumb {
     background-color: #bfdbfe;
     border-radius: 24px;
+  }
+
+  @media (max-width: 768px) {
+    #fadeDiv {
+      
+    }
   }
 </style>
