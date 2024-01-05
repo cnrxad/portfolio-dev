@@ -63,4 +63,15 @@ const { description, title } = Astro.props;
     min-height: 100vh;
     overflow-x: hidden;
   }
+  * {
+    scrollbar-width: thin;
+    scrollbar-color: #bfdbfe #ffffff;
+  }
+  *::-webkit-scrollbar {
+    width: 3.14px;
+  }
+  *::-webkit-scrollbar-thumb {
+    background-color: #bfdbfe;
+    border-radius: 24px;
+  }
 </style>
